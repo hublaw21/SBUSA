@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyTestAppv2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_elementID">Element ID...</string>
+    <string name="hint_elementName">Element Name...</string>
+    <string name="button_save">Save</string>
+    <string name="empty_not_saved">Element not saved because it is empty.</string>
+</resources>
