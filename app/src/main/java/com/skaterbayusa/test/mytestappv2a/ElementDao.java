@@ -15,6 +15,9 @@ public interface ElementDao {
     @Insert
     void insert(Element element);
 
+    @Insert
+    void insertAll(Element...dataEntities);
+
     @Delete
     void delete(Element element);
 
@@ -25,5 +28,15 @@ public interface ElementDao {
     //@Query("SELECT * from element_table ORDER BY element ASC")  //original working
     // @Query("SELECT * from element_table ORDER BY elementID ASC") // first multi-field attempt
     //LiveData<List<Element>> getAllElements();
-    LiveData<List<Element>> getAllElements();
+    List<Element> getAllElements();
+
+    /*@Query("SELECT * FROM element_table")
+    List<Element> getAll;
+    */
+    @Query("SELECT COUNT(*) FROM element_table")
+    int rowCount();
+
+    @Query("SELECT COUNT(*) FROM element_table WHERE elementID LIKE findElementByID")
+    Element findElement(String elementID);
+
 }
