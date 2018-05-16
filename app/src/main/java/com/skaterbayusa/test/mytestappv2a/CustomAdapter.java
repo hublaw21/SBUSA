@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
+/*
 public class CustomAdapter extends BaseAdapter {
         Context context;
         String elementList[][];
@@ -52,3 +52,4 @@ public class CustomAdapter extends BaseAdapter {
             return view;
         }
     }
+*/

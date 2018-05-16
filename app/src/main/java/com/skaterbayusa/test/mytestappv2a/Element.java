@@ -10,26 +10,26 @@ import android.support.annotation.NonNull;
 public class Element {
     @PrimaryKey
     @NonNull
-    // Old working version
-    @ColumnInfo(name = "element")
-    private String mElement;
-
-    public Element(String element) {this.mElement = element;}
-
-    public String getElement(){return this.mElement;}
-
-    /* new changes
     @ColumnInfo(name = "elementID")
     private String mElementID;
     @ColumnInfo(name = "elementName")
     private String mElementName;
 
-    public Element (){
+    public Element(String mElementID, String mElementName) {
+        this.mElementID = mElementID;
+        this.mElementName = mElementName;
     }
+
     public String getElementID() {return mElementID;}
     public  void setElementID(String elementID) { this.mElementID = elementID;}
     public String getElementName() {return mElementName;}
     public  void setElementName(String elementName) { this.mElementName = elementName;}
-    */
-    //
+
+    @Override
+    public String toString(){
+        return "Element{" +
+                "mElementID='" +mElementID + '\'' +
+                ", mElementName=" + mElementName + '\'' +
+                '}';
+    }
 }
