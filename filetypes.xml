@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern="Recycler_View_Adaper" type="CLASS" />
       <mapping pattern="Models" type="PLAIN_TEXT" />
       <mapping ext="sqlite" type="PLAIN_TEXT" />
       <mapping ext="db" type="SQL" />
