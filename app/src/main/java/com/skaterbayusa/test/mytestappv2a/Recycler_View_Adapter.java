@@ -11,11 +11,13 @@ import java.util.List;
 
 public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> {
 
-        List<Data> list = Collections.emptyList();
-        Context context;
+    //List<Data> list = Collections.emptyList();
+    List<Element> list = Collections.emptyList();
+    Context context;
 
-        public Recycler_View_Adapter(List<Data> list, Context context) {
-            this.list = list;
+        //public Recycler_View_Adapter(List<Data> list, Context context) {
+        public Recycler_View_Adapter(List<Element> list, Context context) {
+                this.list = list;
             this.context = context;
         }
 
@@ -31,8 +33,10 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> {
         public void onBindViewHolder(View_Holder holder, int position) {
 
             //Use the provided View Holder on the onCreateViewHolder method to populate the current row on the RecyclerView
-            holder.elementID.setText(list.get(position).elementID);
-            holder.elementName.setText(list.get(position).elementName);
+            //holder.elementID.setText(list.get(position).elementID);
+            //holder.elementName.setText(list.get(position).elementName);
+            holder.elementID.setText(list.get(position).getElementID());
+            holder.elementName.setText(list.get(position).getElementName());
         }
 
         @Override
@@ -47,17 +51,18 @@ public class Recycler_View_Adapter extends RecyclerView.Adapter<View_Holder> {
         }
 
         // Insert a new item to the RecyclerView on a predefined position
-        public void insert(int position, Data data) {
-            list.add(position, data);
+        //public void insert(int position, Data data) {list.add(position, data);
+        public void insert(int position, Element element) {
+            list.add(position, element);
             notifyItemInserted(position);
         }
 
         // Remove a RecyclerView item containing a specified Data object
-        public void remove(Data data) {
-            int position = list.indexOf(data);
+        //public void remove(Data data) {int position = list.indexOf(data);
+        public void remove(Element element) {
+            int position = list.indexOf(element);
             list.remove(position);
             notifyItemRemoved(position);
         }
-
     }
 
