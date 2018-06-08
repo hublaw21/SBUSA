@@ -1,5 +1,6 @@
 <application>
   <component name="DebuggerSettings">
+    <option name="WATCH_RETURN_VALUES" value="true" />
     <filter>
       <option name="PATTERN" value="com.sun.*" />
       <option name="ENABLED" value="true" />
@@ -78,9 +79,11 @@
   </component>
   <component name="XDebuggerSettings">
     <data-views>
-      <show-values-inline>false</show-values-inline>
+      <option name="showLibraryStackFrames" value="false" />
     </data-views>
-    <general />
+    <general>
+      <unmute-on-stop>true</unmute-on-stop>
+    </general>
     <debuggers>
       <debugger id="ObjectiveC">
         <configuration>
